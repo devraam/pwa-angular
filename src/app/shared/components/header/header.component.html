@@ -1,0 +1,45 @@
+<header class=" gradient-color" >
+  <div class="flex-block " >
+    <img class="logo" src="assets/img/Logo.png">
+  </div>
+  <div class="flex-block ">
+    <div class="flex-item hidden-mobile">
+      <img src="assets/img/Rick y Morty.svg">
+    </div>
+    <div class="flex-item hidden-mobile">
+      <img src="assets/img/Portal.svg">
+    </div>
+    <div class="flex-block flex-item hidden-mobile">
+      <a class="nav-custom" [routerLink]="['character-list']">
+        <div class="person" [routerLinkActive]="['is-active']">
+          <div class="img-nav"></div>
+          <div class="text">Personajes</div>
+        </div>
+      </a> 
+      <a class="nav-custom" [routerLink]="['episode-list']" >
+        <div class="episode" [routerLinkActive]="['is-active']">
+          <div class="img-nav"></div>
+          <div class="text">Episodios</div>
+        </div>
+      </a>
+    </div>
+  </div>
+  
+</header>
+<app-form-search class="d-flex justify-content-center"></app-form-search>
+<div class="nav-mobile gradient-color">
+  <div class="grid-block ">
+    <a class="nav-custom" [routerLink]="['character-list']">
+      <div class="person-mob" [routerLinkActive]="['is-active']">
+        <div class="img-nav"></div>
+        <div class="text">Personajes</div>
+      </div>
+    </a> 
+    <a class="nav-custom" [routerLink]="['episode-list']" >
+      <div class="episode-mob" [routerLinkActive]="['is-active']">
+        <div class="img-nav"></div>
+        <div class="text">Episodios</div>
+      </div>
+    </a>
+  </div>
+</div>

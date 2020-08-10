@@ -1,0 +1,19 @@
+<div class="" infinite-scroll (scrolled)="onScrollDown()">
+    <div class="card" *ngFor="let episode of episodes">
+       <app-episode [episode]="episode"></app-episode>
+    </div>
+    <div
+      class=""
+      *ngIf="episodes.length <= 0"
+    >
+      <p>No results.......</p>
+    </div>
+  </div>
+  <button 
+  [ngClass]="'no-hidden'"
+  *ngIf="showGoUpButton"
+  clas="btn btn-dark"
+  (click)="onScrollTop()">
+    Go UP
+  </button>
+  

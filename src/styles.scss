@@ -1,1 +1,253 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300&display=swap');
+
+html, body{
+    height: 100%;
+    scroll-behavior: smooth;
+    font-size: 12px;
+}
+.flex-block{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-flow: wrap;
+        @media only screen and (min-width: 1200px) {
+            width: auto;
+            padding: 2% 0 3%;
+        }
+}
+.flex-item{
+    width: 30%;
+    margin: 0;
+    padding: 0;
+    display: contents;
+}
+
+.hidden-mobile{
+    display: none;
+    @media only screen and (min-width: 768px) {
+        display: none;
+    }
+    @media only screen and (min-width: 992px) {
+        display: contents;
+    } 
+
+    @media only screen and (min-width: 1200px) {
+        width: 30%;
+        display: inline-flex;
+    }
+}
+
+.gradient-color{
+   background: linear-gradient(90deg, #C84E89 0%, #F15F79 100%);
+   @media only screen and (min-width: 1200px) {
+     padding: 0 5%;
+   }
+}
+.logo{
+    width: 50%;
+    margin: 5% auto;
+    @media only screen and (min-width: 768px) {
+        width: auto;
+        margin: 5%;
+    } 
+    @media only screen and (min-width: 1200px) {
+        width: auto;
+        margin: 1%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+}
+
+.nav-custom{
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    &:hover {
+        text-decoration: none;
+    }
+    .img-nav{
+        width: 210px;
+        height: 350px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        opacity: 0.6;
+        transition-timing-function: ease-in-out;
+    }
+    .person .img-nav{
+        background-image: url("./assets/img/Meezeek2on.svg");
+        background-position: 15px;
+    }
+    .episode .img-nav{
+        background-image: url("./assets/img/Meezeek1on.svg");
+        background-position: right;
+    }
+    .person-mob .img-nav{
+        background-image: url("./assets/img/rick.svg");
+        background-position: 15px;
+        width: 90px;
+        height: 60px;
+        margin: 2% auto;
+    }
+    .episode-mob .img-nav{
+        background-image: url("./assets/img/Morty.svg");
+        background-position: 15px;
+        width: 90px;
+        height: 60px;
+        margin: 2% auto;
+        
+    }
+    .is-active .img-nav{
+        opacity: 1;
+    }
+    .text{
+        display: inline-flex;
+        font-family: 'Creepster', cursive;
+        font-size: 24px;
+        color: #fff;
+    }
+    .is-active{
+        cursor: default;
+        .text{
+            border-bottom: #fff 3px solid;
+        }
+    }
+
+
+}
+.mobile-custom{
+    width: 100%;
+    max-width: 40rem;
+}
+
+.nav-mobile{
+    width: 100%;
+    margin: 0;
+    border-radius: 10px;
+    padding: 0;
+    padding-bottom: 2%;
+    height: 100px;
+    position: fixed;
+    bottom: 0;
+    z-index: 9999;
+    @media only screen and (min-width: 992px) {
+       display: none;
+    } 
+}
+
+.grid-block{
+    display: grid;
+    grid: 100px / auto auto;
+}
+
+.card{
+    margin: 7%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none!important;
+    @media only screen and (min-width: 992px) {
+        display: inline-flex !important;
+        flex-direction: row !important;
+        width: 45%;
+        margin: 20px;
+    } 
+    @media only screen and (min-width: 1200px) {
+        border: none!important;
+    }
+    
+}
+.card-grid{
+    display: grid;
+    grid: 150px / 30% auto;
+    grid-gap: 10px;
+    overflow: hidden;
+    @media only screen and (min-width: 1200px) {
+        grid: 300px/24rem 28rem;
+        grid-gap: 3rem;
+        margin-right: 5%;
+    }
+}
+
+.card-img-top{
+    height: 150px;
+    width: 100%;
+    @media only screen and (min-width: 1200px) {
+        height: 300px;
+    }
+}
+.rounded-custom {
+    border-radius: 10px; 
+    box-shadow: 0 0.2rem 0 rgba(0, 0, 0, 0.12);
+    background-color:#F6F6F6;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.main-tex-card{
+    margin: 0;
+    padding: 0 4% 0 2%;
+    color: #404040;
+    @media only screen and (min-width: 1200px) {
+        margin-top: 5%;
+        position: relative;
+    }
+   
+}
+h2{
+    font-family: 'Play', sans-serif;
+    border-bottom:  #C84E89 2px solid;
+    padding-bottom: 5px;
+    margin: 1rem 0 0.5rem;
+}
+h3{
+    font-family: 'Roboto', sans-serif;
+    margin: 0.5rem 0;
+}
+.text-muted{
+   color: #807E7E;
+}
+.btn-link-custom{
+    font-family: 'Roboto', sans-serif;
+    color: #C84E89;
+    font-size: 1.2em;
+    @media only screen and (min-width: 1200px) {
+        color: #fff;
+        background:linear-gradient(90deg, #C84E89 0%, #F15F79 100%);
+        position: absolute;
+        bottom: 2rem;
+        padding: 1rem;
+        border-radius: 10px;
+    }
+    
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 50;
+  }
+  
+  .modal-box {
+    position: fixed;
+    top: 30vh;
+    left: 20vw;
+    width: 60vw;
+    padding: 16px;
+    z-index: 100;
+    background: white;
+    box-shadow: 0 2px 8px rbga(0, 0, 0, 0.26);
+  }
+  
+  .modal-box-actions {
+    text-align: right;
+  }
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
